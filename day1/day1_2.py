@@ -5,7 +5,6 @@ filename = "input.txt"
 with open(filename) as f:
     lines = f.readlines()
     lines = [int(x.strip()) for x in lines]
-    lines.sort()
     for (a,b,c) in itertools.product(lines, lines.copy(), lines.copy()):
         if(a + b + c == 2020):
             print(a,b,c)
