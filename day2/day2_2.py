@@ -13,6 +13,6 @@ with open(filename) as f:
 
     for line in lines:
         (from_no, to_no, letter, string) = re.findall(regex, line)[0]
-        if bool(string[int(from_no) - 1] == letter) ^ bool(string[int(to_no) - 1] == letter):
+        if (string[int(from_no) - 1] == letter) ^ (string[int(to_no) - 1] == letter):
             valid_pws += 1
     print(valid_pws)
